@@ -18,7 +18,7 @@ export default function Resume() {
             You can view my resume and certificates.
             <br /><br />
             <a
-              href="/Resume and Certification- (Venkata Karthick Thiruvenkadam).pdf"
+              href="https://github.com/Venkata2405/portfolio/blob/main/public/Resume%20and%20Certification-%20(Venkata%20Karthick%20Thiruvenkadam).pdf"
               download
               className="button w-fit font-hero-font"
             >
