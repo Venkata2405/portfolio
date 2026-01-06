@@ -18,8 +18,8 @@ export default function Resume() {
             You can view my resume and certificates.
             <br /><br />
             <a
-              href="https://github.com/Venkata2405/portfolio/blob/main/public/Resume%20and%20Certification-%20(Venkata%20Karthick%20Thiruvenkadam).pdf"
-              download
+              href={`${process.env.PUBLIC_URL}/Resume and Certification- (Venkata Karthick Thiruvenkadam).pdf`}
+              download target="_blank" rel="noreferrer"
               className="button w-fit font-hero-font"
             >
               Download
