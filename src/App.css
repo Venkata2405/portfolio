@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+
+header ul li {
+  @apply px-2
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.bg-primary{
+  background: rgb(85, 81, 227);
+  
+}
+.mobile-nav {
+  @apply fixed top-10 left-0 bg-gray-600 w-full h-fit opacity-70;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mobile-nav ul li{
+  @apply w-full h-full text-center py-2 border-b border-white;
+}
+.bg-2{
+  @apply bg-gradient-to-r from-[#0f172a]  to-[#334155]
+}
+.bg-3{
+  @apply bg-gradient-to-b from-[#092635] via-[#1b4242] to-[#5c8374]
+}
+.bg-4{
+  @apply bg-gradient-to-b from-[#443f3f] to-[#cab779]
+}
+.bg-5{
+  @apply bg-gradient-to-tl from-[#a2d2df] via-[#f6efbd] to-[#e4c087]
+}
+.bg-6{
+  @apply bg-gradient-to-b from-[#628ff0] via-[#3f6a97] to-[#3da6d6]
+}
+.bg-8{
+  @apply bg-gradient-to-br from-[#645545] to-[#e69e5a]
+}
+.bg-7{
+  @apply bg-gradient-to-b from-[#434343] to-[#000000]
+}
+.project-desc{
+  @apply absolute inset-0 flex items-center justify-center bg-black/70 opacity-0 hover:opacity-100 text-white transition font-medium rounded-2xl;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* From Uiverse.io by Creatlydev */ 
+.button {
+  line-height: 1;
+  background-color: transparent;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.35em;
+  padding: 0.75em 1em;
+  padding-right: 1.25em;
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 700;
+  border-radius: 2em;
+  font-size: 1rem;
+  box-shadow: 0 0.7em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+  transition: transform 0.3s;
+
+  background: linear-gradient(
+    90deg,
+    rgba(77, 54, 208, 1) 0%,
+    rgba(132, 116, 254, 1) 100%
+  );
 }
 
-.App-link {
-  color: #61dafb;
+.button__icon {
+  width: 1.25em;
+  height: 1.25em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover {
+  border-color: #f4f5f2;
+}
+
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 0.5em 1.5em -0.5em hsla(249, 62%, 51%, 0.745);
+}
+
+
+/* Button-2 */ 
+/* From Uiverse.io by WhiteNervosa */ 
+.button-2 {
+  font-size: 18px;
+  color: #e1e1e1;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: lowercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.button-2:focus,
+.button-2:hover {
+  color: #fff;
+}
+
+.button-2:focus:after,
+.button-2:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.button-2:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+p{
+  @apply font-hand-font;
+}
+#link{
+  @apply font-lk-font;
+}
+
+/* =====================================
+   SECTION CONTAINER (DO NOT MOVE)
+===================================== */
+.animate-on-scroll {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =====================================
+   INNER CONTENT (THIS ANIMATES)
+===================================== */
+.animate-on-scroll > * {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+/* =====================================
+   WHEN SECTION IS VISIBLE
+===================================== */
+.animate-on-scroll.show > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.7s ease-out;
+}
+
+/* =====================================
+   DIFFERENT ENTRY DIRECTIONS
+===================================== */
+
+/* PROJECTS → from left */
+.project-motion > * {
+  transform: translateX(-60px);
+}
+
+/* RESUME → from right */
+.resume-motion > * {
+  transform: translateX(60px);
+}
+
+/* CONTACT → scale */
+.contact-motion > * {
+  transform: scale(0.9);
+}
+
+.animate-on-scroll.show.contact-motion > * {
+  transform: scale(1);
 }
