@@ -8,14 +8,14 @@ export default function Projects() {
   return (
     <section
       id="Projects"
-      className="scroll-mt-24 pt-16 pb-10 px-5 bg-6 overflow-hidden"
+      className="scroll-mt-24 pt-16 pb-10 px-5 bg-13 overflow-hidden"
     >
       {/* Section Header */}
       <div className="mb-10">
-        <h1 className="text-4xl text-gray-300 font-hero-font border-b-2 w-[200px] border-gray-300 mb-4">
+        <h1 className="text-4xl font-hero-font border-b-2 w-[200px] border-slate-900 mb-4">
           My Projects
         </h1>
-        <p className="text-gray-300 
+        <p className="text-gray-800
         max-w-2xl">
           These are some of my recent projects built using React, MERN Stack,
           APIs, and Cloud Computing.
