@@ -27,7 +27,7 @@ export default function Resume() {
           </p>
 
           <a
-            href={`${process.env.PUBLIC_URL}/final-resume.pdf`}
+            href={`${process.env.PUBLIC_URL}/Resume_VK.pdf`}
             className="button w-fit py-3 text-xl inline-block"
           >
             Download

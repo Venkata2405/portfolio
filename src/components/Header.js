@@ -7,14 +7,14 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full flex justify-between items-center px-5 py-2 bg-primary shadow-md">
       
-      <a href="/" className="font-hero-font font-semibold text-black text-lg">
+      <a href="https://venkata2405.github.io/portfolio/" className="font-hero-font font-semibold text-black text-lg">
         Venkata Karthick
       </a>
 
       {/* Desktop Menu */}
       <nav className="hidden md:block">
         <ul className="flex space-x-6 text-white font-hand-font">
-          <li><a href="/" className="hover:text-gray-300">Home</a></li>
+          <li><a href="#Hero" className="hover:text-gray-300">Home</a></li>
           <li><a href="#About" className="hover:text-gray-300">About</a></li>
           <li><a href="#Projects" className="hover:text-gray-300">Projects</a></li>
           <li><a href="#Resume" className="hover:text-gray-300">Resume</a></li>
@@ -26,7 +26,7 @@ export default function Header() {
       {toggleMenu && (
         <nav className="absolute top-full left-0 w-full font-hand-font bg-slate-800 md:hidden">
           <ul className="flex flex-col text-white text-center h-fit space-y-4 py-0">
-            <li className="border-b-2"><a onClick={() => setToggleMenu(false)} href="/">Home</a></li>
+            <li className="border-b-2"><a onClick={() => setToggleMenu(false)} href="#Hero">Home</a></li>
             <li className="border-b-2"><a onClick={() => setToggleMenu(false)} href="#About">About</a></li>
             <li className="border-b-2"><a onClick={() => setToggleMenu(false)} href="#Projects">Projects</a></li>
             <li className="border-b-2"><a onClick={() => setToggleMenu(false)} href="#Resume">Resume</a></li>
